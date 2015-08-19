@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   # patch "/recipes/:id" => "recipes#update"
   # get "/recipes/:id" => "recipes#show", as: "recipe"
   # delete "recipes/:id" => "recipes#destroy", as: "destroy_recipe"
-  resources :recipes
+  resources :recipes do
+    member do
+      post "like"
+    end
+  end
   root "pages#home"
 end
