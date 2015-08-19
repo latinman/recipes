@@ -64,6 +64,17 @@ h2 {
   border-radius: 50%;
 }
 
+span.picture {
+  margin: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.show_recipe {
+  margin: 10px;
+}
+
 .footer {
   margin-top: 25px;
   border-top: 1px solid #eaeaea;
