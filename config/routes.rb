@@ -12,5 +12,11 @@ Rails.application.routes.draw do
       post "like"
     end
   end
+
+  resources :chefs, except: [:new]
+  get "/register" => "chefs#new"
+  get "/login" => "logins#new"
+  post "/login" => "logins#create"
+  get "/logout" => "logins#destroy"
   root "pages#home"
 end
