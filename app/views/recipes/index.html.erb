@@ -17,12 +17,14 @@
       <div class="col-md-2">
         <section class="chef_info text-center">
             <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef) %>
-            <h5>Chef name: <%= recipe.chef.chefname %></h5>
+            <h5>Chef: <%= recipe.chef.chefname %></h5>
         </section>
         </div>
         <div class="col-lg-6 well">
           <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
           <p><%= recipe.summary %></p>
+          <p>Styles: <%= render recipe.styles %></p>
+          <p>Ingredients: <%= render recipe.ingredients %></p>
           <p>
             <span class="quiet"><small> <em><strong>Created:</strong> <%= time_ago_in_words(recipe.created_at) %> ago, </em></small></span>
             <span class="quiet"><small> <em><strong>Updated:</strong> <%= time_ago_in_words(recipe.updated_at) %> ago</em></small></span>
