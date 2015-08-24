@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :chefs, except: [:new]
+  resources :chefs, except: [:new, :destroy]
   get "/register" => "chefs#new"
   get "/login" => "logins#new"
   post "/login" => "logins#create"
